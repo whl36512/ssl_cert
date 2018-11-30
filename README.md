@@ -1,9 +1,9 @@
-cp ride.beegrove.com.conf  /etc/httpd/conf.d/.
-mkdir -p /var/www/ride.beegrove.com/html
-echo hello >  /var/www/ride.beegrove.com/html/index.html
-systemctl restart httpd
-yum install -y python2-certbot-apache
-certbot --apache
+- cp ride.beegrove.com.conf  /etc/httpd/conf.d/.
+- mkdir -p /var/www/ride.beegrove.com/html
+- echo hello >  /var/www/ride.beegrove.com/html/index.html
+- systemctl restart httpd
+- yum install -y python2-certbot-apache
+- certbot --apache
 
 
 
