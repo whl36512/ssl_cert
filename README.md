@@ -1,6 +1,13 @@
-[root@a727929967db ~]# yum install -y python2-certbot-apache
+cp ride.beegrove.com.conf  /etc/httpd/conf.d/.
+mkdir -p /var/www/ride.beegrove.com/html
+echo hello >  /var/www/ride.beegrove.com/html/index.html
+systemctl restart httpd
+yum install -y python2-certbot-apache
+certbot --apache
 
-[root@a727929967db ~]# certbot --apache
+
+
+
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator apache, Installer apache
 Enter email address (used for urgent renewal and security notices) (Enter 'c' to
